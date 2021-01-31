@@ -125,6 +125,7 @@ void action()
 
 void Score()
 {
+    system("cls");
     cout<<Player1<<" Score:- "<<first<<"\n";
     cout<<Player2<<" Score:- "<<second<<"\n\n";
     if(first>second)
@@ -133,28 +134,65 @@ void Score()
         cout<<" Overall "<<Player2<<" is WIN today's Game. With Final Score is "<<second<<" - "<<first<<" \n\n";
     else
         cout<<" Overall today's Game is 'TIE' between "<<Player1<<" and "<<Player2<<" With Final Score is "<<first<<" - "<<second<<" \n\n";
+
+
+    bool f=true;
+    while(f)
+    {
+        char var;
+        cout<<" \t Press 'r' to Return on previous menu. \n";
+        cin>>var;
+        if(var=='r')
+            f=false;
+        else
+            cout<<" Please Press correct key. \n\n";
+    }
+    system("cls");
 }
 
 bool new_game()
 {
     char c;
+    bool f=true;
     cout<<" Do you want to Play Again \n";
-    cout<<" Press 'y' for (YES) and 'n' for (NO) \n";
-    cin>>c;
-    if(c=='y')
+    while(f)
     {
-        initial();
-        return true;
+        cout<<" Press 'y' for (YES) and 'n' for (NO) \n";
+        cin>>c;
+        if(c=='y')
+        {
+            f=false;
+            return true;
+
+        }
+        else if(c=='n')
+        {
+            f=false;
+            cout<<"OK.... Your score is:- \n";
+            cout<<Player1<<" Score:- "<<first<<"\n";
+            cout<<Player2<<" Score:- "<<second<<"\n";
+
+        }
+        else
+            cout<<" Please enter correct value. \n\n";
     }
-    else if(c=='n')
+
+    char var;
+    bool f2=true;
+    while(f2)
     {
-        cout<<"OK.... Your score is:- \n";
-        cout<<Player1<<" Score:- "<<first<<"\n";
-        cout<<Player2<<" Score:- "<<second<<"\n";
+        cout<<"\n\n \t Press 'r' to Return on previous menu. \n";
+        cin>>var;
+        if(var=='r')
+        {
+            f2 =false;
+            return false;
+        }
+
+        else
+            cout<<" Please Press correct key. \n\n";
     }
-    else
-        cout<<" Please enter correct value. \n";
-    return false;
+
 }
 
 
@@ -175,6 +213,8 @@ void game()
     action();
     if(new_game())
         game();
+    else
+        system("cls");
 }
 
 
@@ -186,55 +226,136 @@ void game()
 
 void Reset()
 {
+    system("cls");
     char c;
+    bool f=true;
     cout<<" Do you want to Reset Your score! \n";
-    cout<<" Press 'y' for (YES) and 'n' for (NO) \n";
-    cin>>c;
-    if(c=='y')
+
+
+    while(f)
     {
-        first=0;
-        second=0;
-        cout<<"Your Score is Reset. \n";
+        cout<<" Press 'y' for (YES) and 'n' for (NO) \n";
+        cin>>c;
+        if(c=='y')
+        {
+            first=0;
+            second=0;
+            cout<<"Your Score is Reset. \n";
+            f=false;
+        }
+        else if(c=='n')
+        {
+            cout<<" OK... Your Score is: \n";
+            cout<<Player1<<" Score:- "<<first<<"\n";
+            cout<<Player2<<" Score:- "<<second<<"\n\n";
+            f=false;
+        }
+        else
+        {
+            cout<<" Please enter correct value. \n";
+            f=true;
+        }
+
     }
-    else if(c=='n')
+
+
+
+    char var;
+    bool f2=true;
+    while(f2)
     {
-        cout<<" OK... Your Score is: \n";
-        Score();
+        cout<<" \t Press 'r' to Return on previous menu. \n";
+        cin>>var;
+        if(var=='r')
+            f2=false;
+        else
+            cout<<" Please Press correct key. \n\n";
     }
-    else
-        cout<<" Please enter correct value. \n";
+    system("cls");
+
 }
 
 void Hint()
 {
+    system("cls");
     cout<<" \t RULES FOR TIC-TAC-TOE \n";
 
     cout<<" The game is played on a grid that's 3 squares by 3 squares.";
     cout<<" Let, You are X, your friend is O. Players take turns putting their marks in empty squares.\n";
     cout<<" The first player to get 3 of her marks in a row (up, down, across, or diagonally) is the winner.";
-    cout<<" When all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends in a tie.\n";
+    cout<<" When all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends in a tie.\n\n";
+    char var;
+    bool f=true;
+    while(f)
+    {
+        cout<<" \t Press 'r' to Return on previous menu. \n";
+        cin>>var;
+        if(var=='r')
+            f=false;
+        else
+            cout<<" Please Press correct key. \n\n";
+    }
+    system("cls");
 
 }
 
 void Quit()
 {
+    system("cls");
     char c;
+    bool f=true;
     cout<<" Do you Really want to Quit. \n";
-    cout<<" Press 'y' for (YES) and 'n' for (NO) \n";
-    cin>>c;
-    if(c=='y')
-        flag=false;
-    else if(c=='n')
-        flag=true;
-    else
-        cout<<" Please enter correct value. \n";
+    while(f)
+    {
+        cout<<" Press 'y' for (YES) and 'n' for (NO) \n";
+        cin>>c;
+        if(c=='y')
+        {
+            flag = false;
+            f=false;
+        }
+        else if(c=='n')
+        {
+            flag=true;
+            f=false;
+        }
+        else
+        {
+            cout<<" Please enter correct value. \n";
+            f=true;
+        }
+    }
+    char var;
+    bool f2=true;
+    while(f2)
+    {
+        cout<<" \t Press 'r' to Return our Main menu. \n";
+        cin>>var;
+        if(var=='r')
+            f2=false;
+        else
+            cout<<" Please Press correct key. \n\n";
+    }
+    system("cls");
 }
 
 void About()
 {
+    system("cls");
     cout<<"\tThis is a game, named as 'TIC-TAC-TOE'. \n";
     cout<<"\tDeveloped by 'SHUBHAM SHARMA'. \n\n";
-
+    char var;
+    bool f=true;
+    while(f)
+    {
+        cout<<" \t Press 'r' to Return on previous menu. \n";
+        cin>>var;
+        if(var=='r')
+            f=false;
+        else
+            cout<<" Please Press correct key. \n\n";
+    }
+    system("cls");
 }
 
 void wrong()
@@ -266,5 +387,7 @@ main()
         show();
         window();
     }
-    cout<<"\n\t\t -------------------Thanks for Using our game----------------------- \n\n";
+    welcome();
+    show();
+    cout<<"\n\n\t\t -------------------Thanks for Using our game----------------------- \n\n";
 }
