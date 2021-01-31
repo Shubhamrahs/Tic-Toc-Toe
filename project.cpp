@@ -10,19 +10,25 @@ char block[9]={'1','2','3','4','5','6','7','8','9'};
 void welcome()
 {
     cout<<"   \n\n";
-    cout<<" \t \t  \\\\        //\\\\        //    ///////       //            ////////     //////////    //\\\\        //\\\\            ////////  \n";
-    cout<<" \t \t   \\\\      //  \\\\      //    //            //            //           //      //    //  \\\\      //  \\\\          //         \n";
-    cout<<" \t \t    \\\\    //    \\\\    //    ///////       //            //           //      //    //    \\\\    //    \\\\        ///////     \n";
-    cout<<" \t \t     \\\\  //      \\\\  //    //            //            //           //      //    //      \\\\  //      \\\\      //           \n";
-    cout<<" \t \t      \\\\//        \\\\//    ////////      /////////     /////////    //////////    //        \\\\//        \\\\    /////////     \n\n\n";
+    cout<<" \t\t\t  \\\\        //\\\\        //    ///////       //            ////////     //////////    //\\\\        //\\\\            ////////  \n";
+    cout<<" \t\t\t   \\\\      //  \\\\      //    //            //            //           //      //    //  \\\\      //  \\\\          //         \n";
+    cout<<" \t\t\t    \\\\    //    \\\\    //    ///////       //            //           //      //    //    \\\\    //    \\\\        ///////     \n";
+    cout<<" \t\t\t     \\\\  //      \\\\  //    //            //            //           //      //    //      \\\\  //      \\\\      //           \n";
+    cout<<" \t\t\t      \\\\//        \\\\//    ////////      /////////     /////////    //////////    //        \\\\//        \\\\    /////////     \n\n";
+    cout<<" \t     ==============================================================================================================================================  \n\n\n\n";
+}
+
+void ttt()
+{
+    cout<<"\n \n";
+    cout<<"\t\t //////// ////////   ///////           ////////  //\\\\      ///////             ////////  ////////  ///////             \n";
+    cout<<"\t\t   //       //      //        //////     //     //==\\\\    //        //////       //     //    //  //==                   \n";
+    cout<<"\t\t  //    ////////   ///////              //     //    \\\\  ///////                //     ////////  ///////               \n\n\n";
 }
 
 void show()
 {
-    cout<<"\n \n";
-    cout<<"\t //////// ////////   ///////           ////////  //\\\\      ///////             ////////  ////////  ///////             \n";
-    cout<<"\t   //       //      //        //////     //     //==\\\\    //        //////       //     //    //  //==                   \n";
-    cout<<"\t  //    ////////   ///////              //     //    \\\\  ///////                //     ////////  ///////               \n\n\n";
+    cout<<"  \n\n\n";
     cout<<"\t Choose any one \n";
     cout<<"\t 1. New Game \n";
     cout<<"\t 2. Score \n";
@@ -49,7 +55,8 @@ void board()
 {
 
     system("cls");
-    cout<<"\n";
+    ttt();
+    cout<<"\n\n";
     cout<<"\t\t         |         |      \n";
     cout<<"\t\t         |         |      \n";
 	cout<<"\t\t         |         |      \n";
@@ -126,6 +133,7 @@ void action()
 void Score()
 {
     system("cls");
+    ttt();
     cout<<Player1<<" Score:- "<<first<<"\n";
     cout<<Player2<<" Score:- "<<second<<"\n\n";
     if(first>second)
@@ -227,6 +235,7 @@ void game()
 void Reset()
 {
     system("cls");
+    ttt();
     char c;
     bool f=true;
     cout<<" Do you want to Reset Your score! \n";
@@ -278,6 +287,7 @@ void Reset()
 void Hint()
 {
     system("cls");
+    ttt();
     cout<<" \t RULES FOR TIC-TAC-TOE \n";
 
     cout<<" The game is played on a grid that's 3 squares by 3 squares.";
@@ -302,6 +312,7 @@ void Hint()
 void Quit()
 {
     system("cls");
+    ttt();
     char c;
     bool f=true;
     cout<<" Do you Really want to Quit. \n";
@@ -342,6 +353,7 @@ void Quit()
 void About()
 {
     system("cls");
+    ttt();
     cout<<"\tThis is a game, named as 'TIC-TAC-TOE'. \n";
     cout<<"\tDeveloped by 'SHUBHAM SHARMA'. \n\n";
     char var;
@@ -384,10 +396,12 @@ main()
     welcome();
     while(flag)
     {
+        ttt();
         show();
         window();
     }
     welcome();
+    ttt();
     show();
     cout<<"\n\n\t\t -------------------Thanks for Using our game----------------------- \n\n";
 }
